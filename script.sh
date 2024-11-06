@@ -14,7 +14,9 @@ path=$1
 theme="/boot/grub/theme/"
 config="/etc/default/grub"
 
-source progress_bar.sh
+LIB=$(readlink -f "$0")
+source $LIB
+
 setup_scroll_area
 if [ -d "$theme" ]; then
     echo "Directory theme exist"
