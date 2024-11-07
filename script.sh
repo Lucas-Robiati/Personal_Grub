@@ -15,6 +15,8 @@ theme="/boot/grub/theme/"
 config="/etc/default/grub"
 
 LIB=$(readlink -f "$0")
+DIR=$(dirname "$LiB")
+LIB=$DIR"/"progress_bar.sh
 source $LIB
 
 setup_scroll_area
